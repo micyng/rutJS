@@ -19,13 +19,19 @@ jsfx.page.example_virt_ui = function() {
 jsfx.page.example_virt_ui.prototype.switch_language = function(lng) {
     var manifest = new jsfx.core.uiManifest();
     manifest.addSubAttributeNode("btn_switch_lng", "value", this._res.get_res(lng, "switch_lng"));
-
+    manifest.addSubHtmlNode("func_title", this._res.get_res(lng, "func_title"));
+    manifest.addSubHtmlNode("exp_title", this._res.get_res(lng, "demo_title"));
     return manifest;
 };
 
 jsfx.page.res = function() {
     this._ch_switch_lng = "切换语言";
+    this._ch_func_title = "功能面板";
+    this._ch_demo_title = "示例面板";
+
     this._en_switch_lng = "switch language";
+    this._en_func_title = "function panel";
+    this._en_demo_title = "demos panel";
 };
 
 jsfx.page.res.prototype.get_res = function(lng, action) {
